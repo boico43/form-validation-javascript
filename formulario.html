@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario</title>
+    <style>
+        .error {
+            color: red;
+            font-size: 12px;
+        }
+        .correcto {
+            color: green;
+        }
+        input.error-input {
+            border: 2px solid red;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Formulario de Registro</h2>
+
+<form id="formulario">
+    <label>Nombre completo:</label><br>
+    <input type="text" id="nombre">
+    <div id="errorNombre" class="error"></div><br>
+
+    <label>Correo electrónico:</label><br>
+    <input type="text" id="correo">
+    <div id="errorCorreo" class="error"></div><br>
+
+    <label>Contraseña:</label><br>
+    <input type="password" id="password">
+    <div id="errorPassword" class="error"></div><br>
+
+    <label>Confirmar contraseña:</label><br>
+    <input type="password" id="confirmPassword">
+    <div id="errorConfirm" class="error"></div><br>
+
+    <button type="submit">Enviar</button>
+</form>
+
+<p id="mensajeExito" class="correcto"></p>
+
+<script src="validacion.js"></script>
+
+</body>
+</html>
