@@ -4,12 +4,14 @@
     <meta charset="UTF-8">
     <title>Formulario</title>
     <style>
+        /* Reset general para eliminar márgenes y padding por defecto */
         * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
         }
 
+        /* Centramos el formulario vertical y horizontalmente en la pantalla */
         body {
             font-family: 'Segoe UI', sans-serif;
             background: #f0f2f5;
@@ -20,6 +22,7 @@
             padding: 2rem;
         }
 
+        /* Tarjeta contenedora del formulario con sombra y bordes redondeados */
         .card {
             background: #fff;
             border-radius: 12px;
@@ -29,6 +32,7 @@
             max-width: 420px;
         }
 
+        /* Título del formulario centrado */
         h2 {
             font-size: 1.5rem;
             font-weight: 600;
@@ -37,10 +41,12 @@
             text-align: center;
         }
 
+        /* Contenedor de cada campo para mantener espaciado uniforme */
         .campo {
             margin-bottom: 1.2rem;
         }
 
+        /* Etiquetas de cada campo */
         .campo label {
             display: block;
             font-size: 0.875rem;
@@ -49,6 +55,7 @@
             margin-bottom: 0.4rem;
         }
 
+        /* Estilo base de los inputs */
         .campo input {
             width: 100%;
             padding: 0.6rem 0.9rem;
@@ -61,11 +68,13 @@
             background: #fafafa;
         }
 
+        /* Resaltado al enfocar un campo */
         .campo input:focus {
             border-color: #6366f1;
             background: #fff;
         }
 
+        /* Mensajes de error en rojo debajo de cada campo */
         .error {
             color: #e53e3e;
             font-size: 0.78rem;
@@ -73,10 +82,12 @@
             min-height: 1rem;
         }
 
+        /* Borde rojo en el input cuando hay error */
         input.error-input {
             border: 1.5px solid #e53e3e;
         }
 
+        /* Mensaje de éxito en verde al centro */
         .correcto {
             color: #38a169;
             font-size: 0.9rem;
@@ -84,6 +95,7 @@
             margin-top: 1rem;
         }
 
+        /* Botón de envío con color morado y efecto hover */
         button[type="submit"] {
             width: 100%;
             padding: 0.7rem;
@@ -106,31 +118,43 @@
 <body>
 <div class="card">
     <h2>Formulario de Registro</h2>
+    <!-- Formulario con ID para ser referenciado desde JavaScript -->
     <form id="formulario">
+
+        <!-- Campo: Nombre completo -->
         <div class="campo">
             <label>Nombre completo:</label>
             <input type="text" id="nombre" placeholder="Ej. Juan Pérez">
             <div id="errorNombre" class="error"></div>
         </div>
+
+        <!-- Campo: Correo electrónico -->
         <div class="campo">
             <label>Correo electrónico:</label>
             <input type="text" id="correo" placeholder="correo@ejemplo.com">
             <div id="errorCorreo" class="error"></div>
         </div>
+
+        <!-- Campo: Contraseña -->
         <div class="campo">
             <label>Contraseña:</label>
             <input type="password" id="password" placeholder="Mínimo 8 caracteres">
             <div id="errorPassword" class="error"></div>
         </div>
+
+        <!-- Campo: Confirmación de contraseña -->
         <div class="campo">
             <label>Confirmar contraseña:</label>
             <input type="password" id="confirmPassword" placeholder="Repite tu contraseña">
             <div id="errorConfirm" class="error"></div>
         </div>
+
         <button type="submit">Enviar</button>
     </form>
+    <!-- Mensaje de éxito, visible solo cuando el formulario es válido -->
     <p id="mensajeExito" class="correcto"></p>
 </div>
+<!-- Archivo JS externo con la lógica de validación -->
 <script src="validacion.js"></script>
 </body>
 </html>
