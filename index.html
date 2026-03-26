@@ -66,4 +66,71 @@
             background: #fff;
         }
 
-        .err
+        .error {
+            color: #e53e3e;
+            font-size: 0.78rem;
+            margin-top: 0.3rem;
+            min-height: 1rem;
+        }
+
+        input.error-input {
+            border: 1.5px solid #e53e3e;
+        }
+
+        .correcto {
+            color: #38a169;
+            font-size: 0.9rem;
+            text-align: center;
+            margin-top: 1rem;
+        }
+
+        button[type="submit"] {
+            width: 100%;
+            padding: 0.7rem;
+            background: #6366f1;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            margin-top: 0.5rem;
+            transition: background 0.2s;
+        }
+
+        button[type="submit"]:hover {
+            background: #4f46e5;
+        }
+    </style>
+</head>
+<body>
+<div class="card">
+    <h2>Formulario de Registro</h2>
+    <form id="formulario">
+        <div class="campo">
+            <label>Nombre completo:</label>
+            <input type="text" id="nombre" placeholder="Ej. Juan Pérez">
+            <div id="errorNombre" class="error"></div>
+        </div>
+        <div class="campo">
+            <label>Correo electrónico:</label>
+            <input type="text" id="correo" placeholder="correo@ejemplo.com">
+            <div id="errorCorreo" class="error"></div>
+        </div>
+        <div class="campo">
+            <label>Contraseña:</label>
+            <input type="password" id="password" placeholder="Mínimo 6 caracteres">
+            <div id="errorPassword" class="error"></div>
+        </div>
+        <div class="campo">
+            <label>Confirmar contraseña:</label>
+            <input type="password" id="confirmPassword" placeholder="Repite tu contraseña">
+            <div id="errorConfirm" class="error"></div>
+        </div>
+        <button type="submit">Enviar</button>
+    </form>
+    <p id="mensajeExito" class="correcto"></p>
+</div>
+<script src="validacion.js"></script>
+</body>
+</html>
