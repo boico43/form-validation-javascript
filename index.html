@@ -4,45 +4,66 @@
     <meta charset="UTF-8">
     <title>Formulario</title>
     <style>
-        .error {
-            color: red;
-            font-size: 12px;
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
         }
-        .correcto {
-            color: green;
+
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: #f0f2f5;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
         }
-        input.error-input {
-            border: 2px solid red;
+
+        .card {
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+            padding: 2.5rem 2rem;
+            width: 100%;
+            max-width: 420px;
         }
-    </style>
-</head>
-<body>
 
-<h2>Formulario de Registro</h2>
+        h2 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #1a1a2e;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
 
-<form id="formulario">
-    <label>Nombre completo:</label><br>
-    <input type="text" id="nombre">
-    <div id="errorNombre" class="error"></div><br>
+        .campo {
+            margin-bottom: 1.2rem;
+        }
 
-    <label>Correo electrónico:</label><br>
-    <input type="text" id="correo">
-    <div id="errorCorreo" class="error"></div><br>
+        .campo label {
+            display: block;
+            font-size: 0.875rem;
+            font-weight: 500;
+            color: #444;
+            margin-bottom: 0.4rem;
+        }
 
-    <label>Contraseña:</label><br>
-    <input type="password" id="password">
-    <div id="errorPassword" class="error"></div><br>
+        .campo input {
+            width: 100%;
+            padding: 0.6rem 0.9rem;
+            border: 1.5px solid #d1d5db;
+            border-radius: 8px;
+            font-size: 0.95rem;
+            color: #222;
+            outline: none;
+            transition: border-color 0.2s;
+            background: #fafafa;
+        }
 
-    <label>Confirmar contraseña:</label><br>
-    <input type="password" id="confirmPassword">
-    <div id="errorConfirm" class="error"></div><br>
+        .campo input:focus {
+            border-color: #6366f1;
+            background: #fff;
+        }
 
-    <button type="submit">Enviar</button>
-</form>
-
-<p id="mensajeExito" class="correcto"></p>
-
-<script src="validacion.js"></script>
-
-</body>
-</html>
+        .err
